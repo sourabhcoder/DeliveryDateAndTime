@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © sourabhcoder. All rights reserved.
+ */
+ -->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="checkout.root">
+            <arguments>
+                <argument name="jsLayout" xsi:type="array">
+                    <item name="components" xsi:type="array">
+                        <item name="checkout" xsi:type="array">
+                            <item name="children" xsi:type="array">
+                                <item name="steps" xsi:type="array">
+                                    <item name="children" xsi:type="array">
+                                        <item name="shipping-step" xsi:type="array">
+                                            <item name="children" xsi:type="array">
+                                                <item name="shippingAddress" xsi:type="array">
+                                                    <item name="children" xsi:type="array">
+                                                        <item name="shipping-address-fieldset" xsi:type="array"> <!-- before-shipping-method-form is used for positioning this custom form -->
+                                                            <item name="children" xsi:type="array">
+                                                                <!-- Your form declaration here -->
+                                                                <item name="custom-checkout-form-container" xsi:type="array">
+                                                                      <item name="component" xsi:type="string">Sourabh_DeliveryDateAndTime/js/view/custom-checkout-form</item>
+                                                                      <item name="provider" xsi:type="string">checkoutProvider</item>
+
+                                                                      <item name="children" xsi:type="array">
+                                                                          <item name="custom-checkout-form-fieldset" xsi:type="array">
+                                                                              <!-- uiComponent is used as a wrapper for form fields (its template will render all children as a list) -->
+                                                                              <item name="component" xsi:type="string">uiComponent</item>
+                                                                              <!-- the following display area is used in template (see below) -->
+                                                                              <item name="displayArea" xsi:type="string">custom-checkout-form-fields</item>
+                                                                              <item name="children" xsi:type="array">
+                                                                                  <item name="expected_delivery_date_time" xsi:type="array">
+                                                                                      <item name="component" xsi:type="string">Sourabh_DeliveryDateAndTime/js/form/element/date</item>
+                                                                                      <item name="config" xsi:type="array">
+                                                                                          <!--customScope is used to group elements within a single form (e.g. they can be validated separately)-->
+                                                                                          <item name="customScope" xsi:type="string">customCheckoutForm</item>
+                                                                                          <item name="template" xsi:type="string">ui/form/field</item>
+                                                                                          <item name="elementTmpl" xsi:type="string">ui/form/element/date</item>
+                                                                                      </item>
+                                                                                      <item name="provider" xsi:type="string">checkoutProvider</item>
+                                                                                      <item name="dataScope" xsi:type="string">customCheckoutForm.expected_delivery_date_time</item>
+                                                                                      <item name="label" xsi:type="string">Expected Delivery Date And Time.</item>
+                                                                                      <item name="validation" xsi:type="array">
+                                                                                          <item name="required-entry" xsi:type="string">true</item>
+                                                                                      </item>
+                                                                                      <item name="options" xsi:type="array">
+                                                                                          <item name="dateFormat" xsi:type="string">yyyy-MM-dd</item>
+                                                                                          <item name="timeFormat" xsi:type="string">HH:mm:ss</item>
+                                                                                          <item name="showsTime" xsi:type="boolean">true</item>
+                                                                                      </item>
+                                                                                  </item>
+                                                                              </item>
+                                                                          </item>
+                                                                      </item>
+                                                                  </item>
+                                                            </item>
+                                                        </item>
+                                                    </item>
+                                                </item>
+                                            </item>
+                                        </item>
+                                    </item>
+                                </item>
+                            </item>
+                        </item>
+                    </item>
+                </argument>
+            </arguments>
+        </referenceBlock>
+    </body>
+</page>

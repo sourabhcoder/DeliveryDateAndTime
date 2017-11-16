@@ -1,0 +1,4 @@
+<?php $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$devliveryDateAndTimeFactory = $objectManager->create('\Sourabh\DeliveryDateAndTime\Model\AddDeliveryDateAndTime')->load($this->getOrder()->getQuoteId(),'quote_id');
+?>
+<p>Expected Delivery Date And Time:<?php echo $devliveryDateAndTimeFactory->getDeliveryDateAndTime(); ?></p>
