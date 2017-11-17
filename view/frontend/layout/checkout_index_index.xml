@@ -43,9 +43,6 @@
                                                                                       <item name="provider" xsi:type="string">checkoutProvider</item>
                                                                                       <item name="dataScope" xsi:type="string">customCheckoutForm.expected_delivery_date_time</item>
                                                                                       <item name="label" xsi:type="string">Expected Delivery Date And Time.</item>
-                                                                                      <item name="validation" xsi:type="array">
-                                                                                          <item name="required-entry" xsi:type="string">true</item>
-                                                                                      </item>
                                                                                       <item name="options" xsi:type="array">
                                                                                           <item name="dateFormat" xsi:type="string">yyyy-MM-dd</item>
                                                                                           <item name="timeFormat" xsi:type="string">HH:mm:ss</item>
