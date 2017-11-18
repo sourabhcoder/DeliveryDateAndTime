@@ -17,4 +17,4 @@ class AddDeliveryDateAndTime extends \Magento\Framework\Model\AbstractModel
         $this->_init('Sourabh\DeliveryDateAndTime\Model\ResourceModel\AddDeliveryDateAndTime');
     }
 }
-?>
+

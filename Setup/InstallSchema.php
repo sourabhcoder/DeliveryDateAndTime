@@ -42,4 +42,4 @@ class InstallSchema implements InstallSchemaInterface
         $installer->endSetup();
     }
 }
-?>
+
